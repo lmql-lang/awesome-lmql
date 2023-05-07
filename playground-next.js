@@ -35,7 +35,7 @@ where
          {
             // hello world
             name: "❤️ In-Context Functions",
-            description: "Set response sentiment with constraints.",
+            description: "Affect sentiment with constraints.",
             code: `@lmql.query
 async def mood_description(m: str):
     '''lmql
