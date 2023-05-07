@@ -82,12 +82,12 @@ async def rhyme():
    '''
    incontext
       """
-      Instruction: Generate a verse that rhymes with the previous one and has the same number of syllables.
-      Verse: [VERSE]
+      Above is the beginning of the poem. Generate the next verse that rhymes with the last line and has the same number of syllables.
+      [VERSE]
       """
-      return VERSE.strip()
+      return VERSE
    where
-      stops_before(VERSE, "\\n")
+      stops_before(VERSE, "\n")
    '''
 
 @lmql.query
@@ -95,18 +95,18 @@ async def first_verse():
    '''
    incontext
       """
-      Instruction: Generate a verse that would be perfect for the start of a beautiful rhyme. 
-      Verse: [VERSE]
+      Generate a verse that would be perfect for the start of a beautiful rhyme. 
+      [VERSE]
       """
-      return VERSE.strip()
+      return VERSE
    where
-      stops_before(VERSE, "\\n")
+      stops_before(VERSE, "\n")
    '''
 
 argmax
-    "[FIRST_VERSE]\\n" # double escape necessary
+    "[FIRST_VERSE]\n"
     for i in range(5):
-       "[VERSE]\\n"
+       "[VERSE]\n"
 from 
     "chatgpt" 
 where 
