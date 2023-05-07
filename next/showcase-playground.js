@@ -87,7 +87,7 @@ async def rhyme():
       """
       return VERSE
    where
-      stops_before(VERSE, "\n")
+      stops_before(VERSE, "\\n")
    '''
 
 @lmql.query
@@ -100,13 +100,13 @@ async def first_verse():
       """
       return VERSE
    where
-      stops_before(VERSE, "\n")
+      stops_before(VERSE, "\\n")
    '''
 
 argmax
-    "[FIRST_VERSE]\n"
+    "[FIRST_VERSE]\\n"
     for i in range(5):
-       "[VERSE]\n"
+       "[VERSE]\\n"
 from 
     "chatgpt" 
 where 
