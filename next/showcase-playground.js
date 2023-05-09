@@ -114,6 +114,43 @@ where
 `,
             state: ''
          },
+         {
+            // hello world
+            name: "⏰ Timestamp formatting",
+            description: "incontext for intermediate instr..",
+            code: `@lmql.query
+async def timestring():
+    '''lmql
+    incontext
+        """
+        Instruction: Answer as a timestring in YYYY-MM-DDTHH:MM:SS format:
+        Answer: [RESPONSE]
+        """
+        return RESPONSE.strip(); 
+    where
+        stops_at(RESPONSE, ".") and stops_at(RESPONSE, "\n")
+    '''
+
+argmax
+    "It is the 10th of Aug, 2020 today: [RESPONSE]"
+from 
+    "chatgpt" 
+where 
+    timestring(RESPONSE)
+
+   '''
+
+argmax
+    "[FIRST_VERSE]\\n"
+    for i in range(5):
+       "[VERSE]\\n"
+from 
+    "chatgpt" 
+where 
+    rhyme(VERSE) and first_verse(FIRST_VERSE)
+`,
+            state: ''
+         },
       ]
    }
 ]})
