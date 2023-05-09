@@ -114,7 +114,10 @@ where
 `,
             state: ''
          },
-         @lmql.query
+         {
+            name: "📝 Timestamp Formatting",
+            description: "incontext timestamp instruction..",
+            code: `@lmql.query
 async def timestring():
     '''lmql
     incontext
@@ -124,7 +127,7 @@ async def timestring():
         """
         return RESPONSE.strip(); 
     where
-        stops_at(RESPONSE, ".") and stops_at(RESPONSE, "\\n")
+        stops_at(RESPONSE, ".") and stops_at(RESPONSE, "\n")
     '''
 
 argmax
