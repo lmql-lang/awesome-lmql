@@ -127,7 +127,7 @@ async def timestring():
         """
         return RESPONSE.strip(); 
     where
-        stops_at(RESPONSE, ".") and stops_at(RESPONSE, "\n")
+        stops_at(RESPONSE, ".") and stops_at(RESPONSE, "\\n")
     '''
 
 argmax
