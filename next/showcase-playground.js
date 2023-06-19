@@ -1,4 +1,4 @@
-{ queries: [
+({ queries: [
    
    {
       category: "Introductory Examples", 
@@ -397,4 +397,4 @@ from
          },
       ]
    },
-]};
+]})
