@@ -1,4 +1,4 @@
-module.exports = { queries: [
+{ queries: [
    
    {
       category: "Introductory Examples", 
